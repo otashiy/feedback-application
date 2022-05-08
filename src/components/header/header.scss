@@ -1,0 +1,25 @@
+.header {
+    margin-top: 44px;
+    width: 825px;
+    padding: 14px 16px 14px 24px;
+    background-color: rgba(55, 63, 104, 1);
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+.header__btn {
+padding: 12px 24px;
+margin-left: auto;
+background: #AD1FEA;
+border-radius: 10px;
+color: #fff;
+}
+.header__link {
+margin-right: 16px;
+}
+.header__description {
+margin: 0;
+color: #Fff;
+font-size: 18px;
+}

@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Feedback from "./screens/feedback/feedback";
+import Main from "./screens/main/main";
+import Edit from "./screens/edit/edit";
+import AddFeedback from "./screens/add-feedback/add-feedback";
+import "./assets/sass/main.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+   <Routes>
+    <Route path="/" element={<Main />} />
+    <Route path="/feedback/:id" element={<Feedback />} />
+    <Route path="/add-feedback" element={<AddFeedback />} />
+    <Route path="/edit/:id" element={<Edit />} />
+    </Routes>
+  </>
   );
 }
 
