@@ -1,16 +1,14 @@
 .feature-radio {
     cursor: pointer;
 }
-.feature-radio:hover ~ .feature-radio__span {
-background-color: red;
-}
-
 .feature-radio__input:checked ~ .feature-radio__span {
-    background-color: blue;
+    background-color: #4661E6;
     color: #fff;
 }
 .feature-radio {
     flex-grow: 1;
-    text-align: center;
-    // margin-right: 8px;
+}
+.feature-radio__input:hover ~ .feature-radio__span {
+transition: 0.4s all ease;
+background-color: #CFD7FF;
 }
