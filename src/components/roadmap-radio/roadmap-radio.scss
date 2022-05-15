@@ -1,0 +1,26 @@
+
+.roadmap-label__desc {
+margin: 0;
+font-size: 16px;
+line-height: 23px;
+color: #647196;
+}
+
+.roadmap-content {
+width: 200px;
+display: flex;
+justify-content: space-between;
+}
+
+.roadmap-label__span {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: right;
+    color: #647196;
+}
+.roadmap-label__input:checked ~ .roadmap-label__desc {
+font-weight: 700;
+transition: 0.3s all ease;
+}
+

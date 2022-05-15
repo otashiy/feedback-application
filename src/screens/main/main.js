@@ -1,12 +1,13 @@
-
 import Container from "../../components/container/container";
+
+
 
 const Main = () => {
     return (
    <>
-   <Container className="container">
-   
-   </Container>
+<main>
+<Container />
+</main>
    </>
     );
 }

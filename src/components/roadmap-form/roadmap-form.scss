@@ -1,0 +1,50 @@
+.roadmap-form {
+display: flex;
+flex-direction: column;
+}
+
+.roadmap-form__label {
+    display: flex;
+    margin-left: 24px;
+    position: relative;
+    cursor: pointer;
+    
+    &::before {
+    display: block;
+    width: 8px;
+    height: 8px;
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -24px;
+    background-color: #000;
+    border-radius: 50%;
+    }
+}
+
+.roadmap-form__label--planed {
+ 
+&::before {
+background-color: #F49F85;
+}
+}
+.roadmap-form__label--progress {
+ 
+    &::before {
+    background-color: #AD1FEA;
+    }
+}
+.roadmap-form__label--live {
+ 
+    &::before {
+    background-color: #62BCFA;
+    }
+}
+
+.roadmap-form__label--suggestions {
+ 
+    &::before {
+    background-color: #0f0;
+    }
+}
