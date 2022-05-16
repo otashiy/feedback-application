@@ -1,17 +1,10 @@
 
 import "./container.scss";
-import Filter from "../../components/filter/filter"
-import Products from "../products/products"
-import Header from "../header/header"
 
-const Container = () => {
+const Container = ({ className, width="1100px", style, ...props }) => {
     return (
-    <div className="container">
-    <Filter />
-    <div className="container__wrapper">
-    <Header />
-    <Products />
-    </div>
+    <div className={`container ` + className} style={{maxWidth: width, ...style}} {...props}>
+   
     </div>
     );
 }

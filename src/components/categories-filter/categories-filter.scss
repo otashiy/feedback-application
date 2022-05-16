@@ -1,4 +1,4 @@
-.features-filter {
+.categories-filter {
     padding: 24px 50px 24px;
     background-color: #fff;
     border-radius: 10px;
@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
 }
-.feature-filter__title {
-    font-weight: 600;
+.categories-filter {
+max-width: fit-content;
+border: none;
 }

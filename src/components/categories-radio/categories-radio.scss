@@ -1,0 +1,14 @@
+.categories-radio {
+    cursor: pointer;
+}
+.categories-radio__input:checked ~ .categories-radio__span {
+    background-color: #4661E6;
+    color: #fff;
+}
+.categories-radio {
+    flex-grow: 1;
+}
+.categories-radio__input:hover ~ .categories-radio__span {
+transition: 0.4s all ease;
+background-color: #CFD7FF;
+}

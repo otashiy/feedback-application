@@ -1,0 +1,25 @@
+.main-title {
+    width: 255px;
+    margin: 0;
+    margin-bottom: 24px;
+    padding: 62px 24px 24px;
+    background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%);
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-title strong {
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: -0.25px;
+    opacity: 1;
+  }
+  
+  .main-title span {
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 500;
+    opacity: 0.75;
+  }

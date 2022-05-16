@@ -1,8 +1,8 @@
 import "./products.scss";
 import { useContext } from "react";
-import Feature from "../feature/feature";
 import { ProductsContext } from "../../App";
 import { Link } from "react-router-dom";
+import CategoriesSpan from "../categories-span/categories-span";
 
 
 const Products = () => {
@@ -10,7 +10,7 @@ const Products = () => {
 const { products } = useContext(ProductsContext);
 
     return (
-<ul className="products__list">
+    <ul className="products__list">
       {products && products.productRequests.map((product) => {
             return (  
                 <li className="products__item" key={product.id}>
@@ -18,7 +18,7 @@ const { products } = useContext(ProductsContext);
                 <div className="products__item-wrapper">
                 <Link to={"/feedback/" + product.id} className="products__item-title">{product.title}</Link>
                 <p className="products__item-desc">{product.description}</p>
-                <Feature children={product.category} />
+                <CategoriesSpan children={product.category} />
                  </div>
                 <span className="products__item-text">{product.comments && product.comments.length || 0}</span>
                  </li>
