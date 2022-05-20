@@ -1,21 +1,7 @@
 
-import { useContext, useEffect, useState } from "react";
-import { ProductsContext } from "../../App";
 import RoadMapDesc from "../roadmap-desc/roadmap-desc";
 import "./roadmap-radio.scss";
 const RoadMapRadio = ({ className= "", children }) => {
-
-const [ count, setCount ] = useState({planed: 0, inProgress: 0, live: 0, sugesstions: 0})
-
-const { products } = useContext(ProductsContext);
-
-useEffect(() => {
-
-const countedCounts = {
-    ...count
-}
-
-})
 
     return (
    <>

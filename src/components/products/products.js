@@ -1,19 +1,18 @@
 import "./products.scss";
-import { useContext } from "react";
-import { ProductsContext } from "../../App";
 import { Link } from "react-router-dom";
 import CategoriesSpan from "../categories-span/categories-span";
+import { useProduct } from "../../context/product-context";
 
 
 const Products = () => {
 
-const { products } = useContext(ProductsContext);
+const { products } = useProduct();
 
     return (
     <ul className="products__list">
       {products && products.productRequests.map((product) => {
             return (  
-                <li className="products__item" key={product.id}>
+                <article className="products__item" key={product.id}>
                 <button className="products__item-btn">{product.upvotes}</button>
                 <div className="products__item-wrapper">
                 <Link to={"/feedback/" + product.id} className="products__item-title">{product.title}</Link>
@@ -21,7 +20,7 @@ const { products } = useContext(ProductsContext);
                 <CategoriesSpan children={product.category} />
                  </div>
                 <span className="products__item-text">{product.comments && product.comments.length || 0}</span>
-                 </li>
+                 </article>
             );
         })}
         </ul>

@@ -23,3 +23,14 @@ color: #Fff;
 font-size: 18px;
 font-weight: bold;
 }
+
+.header__wrapper {
+    position: relative;
+}
+.header__sort-btn {
+border: none;
+background-color: transparent;
+color: rgba(242, 244, 254, 0.75);
+font-size: 14px;
+line-height: 20px;
+}

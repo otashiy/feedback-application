@@ -1,34 +1,20 @@
 
-import { useState } from "react";
+
 import "./sort.scss";
-const Sort = () => {
-
-const [ sortOpen, setSortOpen ] = useState(false);
-
-const handleBtnClick = () => {
-    setSortOpen(true)
-}
-
-
+const Sort = ({ width= "300px", options, name, defaultValue, isOpen, onChange }) => {
 
     return (
-    <>
-    <button className={`sort__btn ${sortOpen ? "sort__btn--opened" : ""}`} onClick={handleBtnClick}>Sort by : Most Upvotes</button>
-    <ul className={`sort__list ${sortOpen ? "sort__list--opened" : ""}`} >
-    <li className="sort__item sort__item--active">
-    <p className="sort__item-desc">Most Upvotes</p>
-    </li>
-    <li className="sort__item">
-    <p className="sort__item-desc">Least Upvotes</p>
-    </li>
-    <li className="sort__item">
-    <p className="sort__item-desc">Most Comments</p>
-    </li>
-    <li className="sort__item">
-    <p className="sort__item-desc">Least Comments</p>
-    </li>
-    </ul>
-    </>
+        <ul style={{width}} onChange={onChange} className={`sort ${isOpen ? "sort--opened" : ""}`}>
+       {options.map(option => {
+         <li key={option.value} className="sort__item">
+         <label className="sort__label">
+         <input defaultValue={option.value} defaultChecked={defaultValue === option.value} className="sort__input visually-hidden" type="radio" name={name} />
+         {option.text}
+         <span className="sort__item-tick"></span>
+         </label>
+     </li>
+       })}
+        </ul>
     );
 }
 

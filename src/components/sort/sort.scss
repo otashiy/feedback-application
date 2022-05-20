@@ -1,94 +1,57 @@
+@import "../../assets/sass/mixins.scss";
 
-.sort__btn {
-padding: 0;
-padding: 26px 17px;
-margin: 0;
-background: #373F68;
-border-radius: 10px;
-text-align: center;
-border: none;
-color: #F2F4FE;
-font-size: 14px;
-position: relative;
-cursor: pointer;
-opacity: 0.75;
-
-&::before {
-width: 12px;
-height: 10px;
-display: block;
-content: "";
-background-image: url("../../assets/images/arrow.svg");
-background-repeat: no-repeat;
+.sort {
+@include reset-list;
 position: absolute;
-top: 50%;
-transform: translateY(-50%);
-right: -5px;
-}
-
-}
-.sort__list {
-display: none;
-padding: 0;
-margin: 0;
-list-style: none;
-background: #FFFFFF;
+background-color: #fff;
+border-radius: 10px;
+top: calc(100% + 26px);
+left: 0;
+z-index: 4;
 box-shadow: 0px 10px 40px -7px rgba(55, 63, 104, 0.350492);
-border-radius: 10px;
-position: absolute;
-top: 150px;
-left: calc(50% - 70px);
-z-index: 2;
-}
-
-.sort__btn--opened {
-
-&::before {
-transform: rotate(180deg);
-}
-}
-
-.sort__list--opened {
-display: block;
-}
-.sort__item {
-padding: 12px 139px 12px 24px;
-border-bottom: 1px solid hsl(231, 33%, 34%, 0.15);
-cursor: pointer;
-position: relative;
-
-&::before {
-width: 20px;
-height: 15px;
 display: none;
-content: "";
-position: absolute;
-background-image: url("../../assets/images/true-arrow.svg");
-background-repeat: no-repeat;
-right: 20px;
-top: 50%;
-transform: translateY(-50%);
+}
+.sort--opened {
+    display: block;
+    }
+
+.sort__item {
+
+border-bottom: 1px solid rgba(58, 67, 116, 0.15);
+
+    &:last-child {
+    border-bottom: none;
+    }
 }
 
-&:last-child {
-    border: none;
-}
-}
-.sort__item-desc {
-margin: 0;
-font-size: 16px;
-line-height: 23px;
-color: #647196;
+.sort__label {
+display: block;
+width: 100%;
+padding: 12px 24px;
+align-items: center;
+display: flex;
+cursor: pointer;
+
 
 &:hover {
+transition: 0.3s all ease;
 color: #AD1FEA;
-transition: 0.5s all ease;
 }
 }
 
-.sort__item--active {
-
-&::before {
-    display: block;
+.sort__item-tick {
+display: none;
+margin-left: auto;
+width: 13px;
+height: 10px;
+display: block;
+background: url("../../assets/images/true-arrow.svg") no-repeat top left;
+background-size: 0 0;
+transition: 0.3s all ease;
 }
+
+.sort__input:checked + .sort__item-tick {
+background-size: 100% 100%;
+background-position: center center;
+
 }
