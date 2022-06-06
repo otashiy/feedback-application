@@ -5,9 +5,7 @@ import Edit from "./screens/edit/edit";
 import AddFeedback from "./screens/add-feedback/add-feedback";
 import "./assets/sass/main.scss";
 import ProductsProvider from "./context/product-context";
-
-
-
+import NotFound from "./screens/not-found/not-found";
 
 
 function App() {
@@ -19,6 +17,7 @@ function App() {
     <Route path="/feedback/:id" element={<Feedback />} />
     <Route path="/add-feedback" element={<AddFeedback />} />
     <Route path="/edit/:id" element={<Edit />} />
+    <Route path="*" element={<NotFound />} />
     </Routes>
   </ProductsProvider>
   </>

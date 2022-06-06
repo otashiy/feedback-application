@@ -34,3 +34,18 @@ color: rgba(242, 244, 254, 0.75);
 font-size: 14px;
 line-height: 20px;
 }
+.header__sort-btn::before {
+display: block;
+content: "";
+width: 10px;
+height: 6px;
+position: absolute;
+right: -10px;
+top: 50%;
+transform: translateY(-50%);
+background: url("../../assets/images/arrow.svg") no-repeat;
+}
+
+.header__sort-btn--opened::before {
+transform: rotate(180deg);
+}

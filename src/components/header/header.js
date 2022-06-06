@@ -30,7 +30,7 @@ const Header = () => {
     
 const [ sortValue, setSortValue ] = useState("1");
 const [ isSortOpen, setSortOpen ] = useState(false);
-const { setProducts } = useProduct();
+const { products, setProducts } = useProduct();
 
 const handleSortClick = () => {
 setSortOpen((isSortOpen) => {
@@ -54,7 +54,7 @@ const handleOptionChange = (evt) => {
             case "2":
               return a.upvotes - b.upvotes;  
             case "3": 
-              return b.comments?.length - a.comments?.length  
+              return (b.comments?.length || 0) - (a.comments?.length || 0) 
             case "4": 
               return (a.comments?.length || 0) - (b.comments?.length || 0)  
             default:
@@ -71,11 +71,12 @@ const handleOptionChange = (evt) => {
                 <img className="heaeder__img" src={img} alt="site-logo" width="23" height="24" />
             </Link>
           <div className="header__wrapper">
-          <Button className="header__sort-btn" onClick={handleSortClick}>Sort by: {sortOptions.find(option => option.value === sortValue).text}</Button>
+          <span className="header__span">{products.productRequests.length} Suggestion</span>
+          <Button className={`header__sort-btn ${isSortOpen ? "header__sort-btn--opened" : ""}`} onClick={handleSortClick}>Sort by: {sortOptions.find(option => option.value === sortValue).text}</Button>
 
             <Sort options={sortOptions} name="sort"  defaultValue={sortValue} width="255px" isOpen={isSortOpen} onChange={handleOptionChange} />
           </div>
-            <Button to="/feedback/:id" className="header__btn">+ Add Feedback</Button>
+            <Button to="/add-feedback" className="header__btn">+ Add Feedback</Button>
     </header>
     );
 }

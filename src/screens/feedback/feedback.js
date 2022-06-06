@@ -68,7 +68,7 @@ let currenProduct = products.productRequests.find((product) => {
     </label>
     <div className="feedback__form-wrapper">
     <span className="feedback__form-spn">225 characters left</span>
-    <Button className="feedback__form-btn">Post comments</Button>
+    <Button type = "submit" className="feedback__form-btn">Post comments</Button>
     </div>
     </form>
     </Container>
