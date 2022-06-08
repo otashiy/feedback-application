@@ -7,9 +7,12 @@ color: #647196;
 }
 
 .roadmap-content {
-width: 200px;
-display: flex;
-justify-content: space-between;
+width: 100%;
+}
+
+.roadmap-label__input:checked ~ .roadmap-label__desc {
+font-weight: 700;
+transition: 0.3s all ease;
 }
 
 .roadmap-label__span {
@@ -19,8 +22,8 @@ justify-content: space-between;
     text-align: right;
     color: #647196;
 }
-.roadmap-label__input:checked ~ .roadmap-label__desc {
-font-weight: 700;
-transition: 0.3s all ease;
-}
 
+.roadmap-label__wrapper {
+display: flex;
+flex-direction: column;
+}
