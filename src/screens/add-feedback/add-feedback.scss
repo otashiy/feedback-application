@@ -1,0 +1,120 @@
+.add-form {
+padding: 52px 42px 40px;
+margin: 0 auto;
+width: 540px;
+display: flex;
+flex-direction: column;
+background-color: #fff;
+border-radius: 10px;
+margin-top: 40px;
+
+}
+.add-form__title {
+margin: 0;
+margin-bottom: 40px;
+text-align: left;
+font-weight: 700;
+font-size: 24px;
+line-height: 35px;
+letter-spacing: -0.333333px;
+color: #3A4374;
+}
+
+.add-form__label {
+width: 100%;
+margin-bottom: 24px;
+display: flex;
+flex-wrap: wrap;
+font-weight: 700;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: -0.194444px;
+
+color: #3A4374;
+}
+
+.add-form__input {
+padding: 10px 15px;
+border: none;
+border-radius: 5px;
+width: 100%;
+background-color: #F7F8FD;
+}
+
+.add-form__span {
+width: 100%;
+margin-bottom: 16px;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+
+color: #647196;
+}
+.add-form__select {
+padding: 10px 15px;
+width: 100%;
+background-color: #F7F8FD;
+}
+
+.add-form__area {
+padding: 25px 35px;
+width: 100%;
+background-color: #F7F8FD;
+}
+
+.add-feedback {
+max-width: 540px;
+margin: 0 auto;
+position: relative;
+margin-top: 10px;
+}
+
+.add-feedback__link {
+text-align: left;
+margin-left: 16px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    position: relative;
+    
+    color: #647196;
+
+    &::before {
+    display: block;
+    width: 14px;
+    height: 13px;
+    content: "";
+    position: absolute;
+    background: url("../../assets/images/back-arrow.svg") no-repeat;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    }
+}
+
+.add-feedback__btn {
+        display: block;
+        content: "";
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: absolute;
+        left: 42px;
+        border: none;
+        top: 36px;
+        background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%);
+        color: #fff;
+        font-size: 30px;
+        cursor: pointer;
+}
+
+.add-form__cancel-btn {
+margin-right: 16px;
+background-color: #3A4374;
+}
+.add_form__wrapper {
+display: block;
+margin-left: auto;
+}

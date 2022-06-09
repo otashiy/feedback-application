@@ -1,9 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useProduct } from "../../context/product-context";
 
 const Edit = () => {
+
+const { id } = useParams();
+const { products } = useProduct();
+
+const editingProduct = products.productRequests.find((product) => {
+    return product.id === id
+});
+
     return  (
    <>
-   <h1>Editing feedback</h1>
    <Link to="/">To main page</Link>
    </>
     );
