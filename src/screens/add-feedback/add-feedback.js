@@ -24,13 +24,13 @@ setComment(evt.target.value)
 };
 const handleFormSubmit = () => {
 setProducts([
+    ...products.productRequests,
     {
     id: Math.floor(Math.random * 1000),
     title: titleValue,
     category: categoryValue,
     comments: commentValue
-    },
-    ...products
+    }
 ])
 }
 
